@@ -49,7 +49,7 @@ document.addEventListener("mousemove", (e) => {
 let gyroscope = new Gyroscope({ frequency: 60 });
 
 gyroscope.addEventListener("reading", (e) => {
-	playerPaddle.position = gyroscope.x;
+	playerPaddle.position += gyroscope.x;
 });
 gyroscope.start();
 
